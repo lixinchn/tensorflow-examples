@@ -34,8 +34,8 @@ def usefull_field(org_file, output_file):
             print(e)
     output.close()
 
-# usefull_field(org_train_file, 'training.csv')
-# usefull_field(org_test_file, 'testing.csv')
+usefull_field(org_train_file, 'training.csv')
+usefull_field(org_test_file, 'testing.csv')
 
 # 创建词汇表
 def create_lexicon(train_file):
@@ -66,5 +66,5 @@ def create_lexicon(train_file):
 
 lex = create_lexicon('training.csv')
  
-# with io.open('lexcion.pickle', 'wb') as f:
-#     pickle.dump(lex, f)
+with io.open('lexcion.pickle', 'wb') as f:
+    pickle.dump(lex, f)
